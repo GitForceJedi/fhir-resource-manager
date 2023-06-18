@@ -11,6 +11,7 @@ The poroject uses the .env file to designate the Profile link & the target Serve
 Directions:
 
 - npm i
+- adjust .env file according to your needs & target Server
 
 Then Run:
 
