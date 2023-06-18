@@ -12,14 +12,11 @@ async function theData() {
   console.log(JSON.stringify(logData));
   console.log(JSON.stringify(logData.id));
   console.log(JSON.stringify(logData.resourceType));
-  console.log(
-    JSON.stringify(server + '/' + logData.id + '/' + logData.resourceType)
-  );
 
   const theServer =
     process.env.FHIR_SERVER + '/' + logData.resourceType + '/' + logData.id;
   console.log(theServer);
-  const theProfilePost = await axios.put(theLink, logData);
+  const theProfilePost = await axios.put(theServer, logData);
   console.log(theProfilePost.data);
 }
 

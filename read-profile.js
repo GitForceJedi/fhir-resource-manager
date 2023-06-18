@@ -10,11 +10,12 @@ async function theData() {
   const logData = theData.data;
   delete logData[key];
   console.log(JSON.stringify(logData));
-  console.log(JSON.stringify(logData.id));
-  console.log(JSON.stringify(logData.resourceType));
-  console.log(
-    JSON.stringify(server + '/' + logData.id + '/' + logData.resourceType)
-  );
+  console.log('ID: ' + JSON.stringify(logData.id));
+  console.log('Resource Type: ' + JSON.stringify(logData.resourceType));
+
+  const theServer =
+    process.env.FHIR_SERVER + '/' + logData.resourceType + '/' + logData.id;
+  console.log('The PUT request will be sent here: ' + theServer);
 }
 
 theData();
