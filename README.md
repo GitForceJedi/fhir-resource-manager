@@ -21,3 +21,7 @@ node read-profile.js to read the targeted profile in console.
 or Run:
 
 node put-profile.js to create/update the FHIR Profile on the FHIR Server.
+
+\*Note: This was originally created with the creation of FHIR Profiles in mind. However, this can be used with/for any collection of FIHR resources. Since the projecct operates dynamically off of the Resource Type and ID, so long as the link provided returns a JSON definition of the targeted resource, the code will place that resource on the targeted server.
+
+\*\*XML Version upcoming in furture releases
