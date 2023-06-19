@@ -12,11 +12,12 @@ Directions:
 
 - npm i
 - adjust .env file according to your needs & target Server
+- Multiple profiles can be updated/created simultaneously. They can be included in the .env variable FHIR_PROFILE separated by comma (with no additional spaces, see example contained). The code will execute for each link included in this environment variable.
 
 Then Run:
 
 node read-profile.js to read the targeted profile in console.
 
-or
+or Run:
 
 node put-profile.js to create/update the FHIR Profile on the FHIR Server.
