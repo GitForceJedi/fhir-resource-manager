@@ -24,4 +24,6 @@ node put-profile.js to create/update the FHIR Profile on the FHIR Server.
 
 \*Note: This was originally created with the creation of FHIR Profiles in mind. However, this can be used with/for any collection of FIHR resources. Since the projecct operates dynamically off of the Resource Type and ID, so long as the link provided returns a JSON definition of the targeted resource, the code will place that resource on the targeted server.
 
+\*Note: To run with the text element included in the Resource. Run the version of the files eding with "-with-text.js"
+
 \*\*XML Version upcoming in furture releases
