@@ -2,12 +2,19 @@
   "name": "fhir-profile-updater",
   "version": "1.0.0",
   "description": "",
-  "main": "read-profile.js",
+  "main": "./execute/read-resources.js",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node read-profile.js"
+    "start": "node read-profile.js",
+    "putResources": "node ./execute/put-resources.js",
+    "postResources": "node ./execute/post-resources.js",
+    "readResources": "node ./execute/read-resources.js",
+    "putResourcesWithText": "node ./execute/put-resources-with-text.js",
+    "readResourcesWithText": "node ./execute/read-resources-with-text.js"
   },
-  "author": "",
+  "//": "Do not change the Author. If have contributed to the subsequent version, please append your name/s to the list of names in the Author field below",
+  "author": "Kenneth Michael Crawford",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.3.4",
