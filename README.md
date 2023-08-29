@@ -1,29 +1,30 @@
-This project is to be used to create & update FHIR Profiles on a targeted FHIR Server.
+This project is to be used to create & update FHIR Resources on a targeted FHIR Server.
 
-It will fetch the JSON definition of the Profile and PUT the resource on the designated FHIR Server.
+It will fetch the JSON definition of the Resources and update/create the resource on the designated FHIR Server.
 
-The poroject uses the .env file to designate the Profile link & the target Server the profile should be created/updated.
+The poroject uses the .env file to designate the Resource Links & the Target FHIR Server the resources should be created/updated.
 
-(It will create the Profile by the Profile's original id parameter)
+(This version removes the "text" element from the Resource)
 
-(This version removes the "text" element from the Profile)
-
-Directions:
+Initial Set Up (from root):
 
 - npm i
-- adjust .env file according to your needs & target Server
-- Multiple profiles can be updated/created simultaneously. They can be included in the .env variable FHIR_PROFILE separated by comma (with no additional spaces, see example contained). The code will execute for each link included in this environment variable.
+- edit The Environment Variables file (root/.env) according to your needs & targeted FHIR Server
+- Include all target FHIR Resource Links within the FHIR_RESOURCES Environment Variable, separated by comma (with no additional spaces, see example contained).
+- The code will execute for each link included in this environment variable.
 
-Then Run:
+Directions for use:
 
-node read-profile.js to read the targeted profile in console.
+_npm run readResources_ to read all targeted FHIR resources in console.
 
-or Run:
+_npm run putResources_ to update all targeted FHIR resources on the target FHIR Server. This will create the resources if they do not already exist on the server, by the Original ID. (PUT Request, does not maintain original Resource ID)
 
-node put-profile.js to create/update the FHIR Profile on the FHIR Server.
+_npm run postResources_ to create all targeted FHIR resources on the target FHIR Server. (POST Request, does not maintain original Resource ID)
+
+\*Note: If original Resource IDs must be carried over to the target server, use _npm run putResources_
 
 \*Note: This was originally created with the creation of FHIR Profiles in mind. However, this can be used with/for any collection of FIHR resources. Since the projecct operates dynamically off of the Resource Type and ID, so long as the link provided returns a JSON definition of the targeted resource, the code will place that resource on the targeted server.
 
-\*Note: To run with the text element included in the Resource. Run the version of the files eding with "-with-text.js"
+\*Note: To run with the text element included in the Resource. Run _npm run putResourcesWithText_ or _npm run postResourcesWithText_
 
 \*\*XML Version upcoming in furture releases
