@@ -6,7 +6,7 @@
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node read-profile.js",
+    "start": "node ./execute/read-profile.js",
     "putResources": "node ./execute/put-resources.js",
     "postResources": "node ./execute/post-resources.js",
     "readResources": "node ./execute/read-resources.js",
