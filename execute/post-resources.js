@@ -1,7 +1,7 @@
 var axios = require('axios');
 require('dotenv').config({ path: '.env' });
 
-const resourceLinkArray = process.env.FHIR_PROFILE.split(',');
+const resourceLinkArray = process.env.FHIR_RESOURCES.split(',');
 console.log(resourceLinkArray);
 
 let resourceCount = 1;
